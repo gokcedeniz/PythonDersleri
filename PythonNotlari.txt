@@ -1,0 +1,353 @@
+algoritma: bir problemin çözüm aşamalarının adım adım belirtilişi 
+derleyici: tamamını kontrol edip hataları söyler
+yorumlayıcı: satır satır kontrol edip hataları söyler
+import keyword/keyword.kwlist: keywordleri listeler
+k,y=y,k : k=y, y=k ataması
+x=x+10 : x+=10 
+isim= input("isminiz:")
+print ("b","t","k",sep=".") > aralara nokta koyarak yazdırır. seperate.
+print ("btk", end=(" ")) > yazının sonunda ne olmasını istiyorsam onu yazarım.
+
+kaçış parametreleri: printte tırnağın içinde yazılır 
+\n : alt satıra geç
+\t: bir tab boşluk bırak
+
+print ("a={0}". format(A))
+print (f"A={A}")
+print ("a="+str(A))
+üçü de tanımlanmış olan A'yı yazdırır
+
+if şart:     (iki nokta önemli) 
+	yapılması gereken
+if şart:
+	......
+else
+	......
+
+
+liste ["x","y","z"]
+liste2 [1,2,3,4,5]
+liste3 "python"
+
+"x" in liste > true ya da false değer döndürür. listede x var mı kontrol eder
+if "x" not in liste > eğer x listede yoksa
+
+range (0,5) > 0'dan 5'e kadar değer üretir. 5 dahil değil. 0,1,2,3,4.
+range(1,10,2) > 1'den 10'a ikişer artan değerler
+range (15,3,-4) > 15'ten 3'e dörder azalan değerler
+
+for a in range (0,5):
+	print (a)
+
+list (range(0,5)) > listeye dönüştü
+
+while (şart):
+	.....
+
+while True  > sonsuz döngü
+while True :
+	.....
+	if (şart):
+		break > döngüden çıkar
+
+		continue > devam et, döngüden çıkma diğer değerler için kontrol yap esgeç
+
+def: defination function, fonksiyon tanımlama
+---------------------------------
+def mrb (isim):
+	print("hoşgeldiniz", isim)
+
+ad = input("isminiz nedir")
+selamlama( ad )
+
+değişken isimleri aynı olmak zorunda değil.
+-------------------------------------
+def alan (x,y)
+	A=x*y
+	return A > a değerini döndürür
+ 
+x=int(input("kenar gir"))
+y=int(input("kenar gir"))
+print ("dikdörtgenin alanı", alan(x,y))
+---------------------------------------
+yerel değişken: fonksiyon içinde tanımlanan değişkenler
+fonksiyonun içinde "global x" yazarsam x değişkeni yerel değil global olur. 
+fonk içinde "pass" ve düz "return" fonksiyonu esgeçer
+
+lambda >kısa fonksiyonları tanımlamak için kullanılır
+def dolar(tl):
+	return (tl/18)
+ 
+dolar=lambda tl: tl/18 
+iki kod aynı manadadır.
+fonk adı= lambda değişken: yapılacak işlem
+-----------------------------------------
+özyinelemeli, rekürsif fonk
+fonk içinde aynı fonk çağırma
+------------------------------------
+type(a) > a değişkeninin türü ne
+-------------------------------------
+isim [7] > isim değişkeninin 7. index/indisinde hangi karakter var onu gösterir. 0'dan başlar.
+pythonda negatif indexte var. sağdan ve -1'den başlar
+---------------------------------------
+x [3:] > 3. index ve sonrasını yazar
+x[:3] > 3. indexe kadar olan kısmı yazar
+x[1:5] >1. indexten 5'e kadar alır. 5 dahil değil.
+x[1: : 2] > 1. indexten başla, ikişer ikişer atlayarak indexleri yaz. 1,3,5.....
+x[1:6:3] > 1. indexten 6ya kadar üçer üçer atlayark yazar. 1,4
+x[ : :-1] > stringi ters çevirir
+
+x.replace("eskideğer","yenideğer") > x'i günceller
+
+x[:-1] > sondan bir harf siler
+
+x.split ("_") > _ karakterlerinden x'i ayırarak liste yapar
+	split() > boşluklara göre ayırır
+
+len(x) > x stringinin karakter uzunluğunu söyler
+x.count ("a") > x'teki a karakterlerini saydırır
+
+x is x > x x midir 
+x == x > x x midir
+---------------------------------------------------
+"".join(reversed(x))
+x stringini ters cevirir
+".".join(reversed(x))
+aralara . koyarak stringi ters cevirir
+
+x.lower() > tüm harfleri küçük yapar
+x.upper() > tüm harfleri büyük yapar
+x.swapcase() > büyük harfleri küçük, küçük harfleri büyük yapar
+x.capitalize() > ilk harfi büyük gerisini küçük yapar
+in/ not in yine stringlerde de kullanılabilir 
+--------------------------------------------------
+dizilerin içeriğinin hepsi int ya da char olur yani aynıdır
+listelerin içeriği karışık olur, farklı türler içerir
+
+liste[2] > 2. indexteki veriyi çeker. listelerde indexler virgülle ayrılır, sıfırdan başlar
+liste[-1] > son veriyi çeker
+liste.index("a") > a karakteri hangi indexte 
+liste.append("a") > listenin sonuna a ekler
+liste.insert(2,9) > listede 2. indise 9 sayısını yazar
+len(liste) > listenin eleman uzunluğu
+liste.count("a") > listede a elemanı kaç kez var
+l1.extend(l2) > l1 üzerine l2yi yaz, l1 büyür l2 değişmez
+liste.reverse() > listeyi ters çevirir tekrar listeye atar
+min(liste) > listedeki en küçük değeri bulur
+max(liste) > listedeki en büyük değer
+
+stringi listeye cevirme: 
+kelime= "btkakademi"
+liste=[]
+liste= list(kelime)
+her harfi ayrı syrı olacak şekilde listeye çevirir
+
+liste.remove("a") > listeden 1 tane a karakterlerini siler
+liste.pop(2) > listedeki 2. indexi siler
+liste.clear() >listeyi komple temizler
+
+listelerde de in/not in kullanılabilir
+arananeleman in liste
+
+liste.sort() > listeyi küçükten büyüğe sıralar, listeye atar
+
+for i, deger in enumerate(liste):
+	print(str(i+1)+".gün "+deger)
+------------------------------------------------
+yığın/stack listeye son giren ilk çıkar last in first out
+liste.pop yaparsam en son yazdığım veya liste append yaptığım elemanı çıkarır
+------------------------------------------
+kuyruk/queue listeye son giren son çıkar last in last out
+l.pop(0) > 0. indexi çıkar yani ilk elemanı çıkar derim
+------------------------------------------------
+dict
+mevsim={"kış":1, "yaz":2}
+tc=dict( [ ("talat",1234),("deniz",5678) ] )
+s={} > boş sözlük
+s[1]="bir" > atama yapılır
+----------------------------
+s.get("bir","yok") > bir sözlükte varsa karşılığını gösterir, bulamazsa yok yazar
+s.pop("üç") > üç anahtar kelimesini siler
+s.keys() > anahtar kelimeleri gösterir
+s.values > değerleri gösterir 
+s["iki"] > iki anahtarının değerini gösterir
+s.items() > direkt sözlüğün her seyini yazar 
+------------------------------------
+küme/set
+k={1,2,"c","a"} > küme tanımlar
+k=set("noıfj9w30") > küme tanımlar ayrı ayrı
+k1 | k2 > k1 ve k2  kümelerini birleştirir
+k1 & k2 > k1 ve k2 kesişimi 
+k1-k2 > k1 fark k2, k1de olup k2de olmayan elemanlar
+---------------------------------------
+tuple/demet
+t=(1,2,"c","a") 
+tupleda normal parantez, listede köşeli parantes
+tuple sabittir, değiştirilemez, 1 kez tanımlanır. listeler değiştirilebilir. 
+tuple hafızada daha az yer kaplar
+------------------------------------------
+class araba (marka) :
+	model=marka
+	def metot (self):
+		self.marka="mercedes"
+		
+marka parametredir, olmak zorunda değil
+fonksiyonlar bir classın altında tanımlıysa "metot" denir. 
+classta da "pass" vardır.
+"self" class içinde erişilecek elemanlar için kullanılır. sözü edilen nesneyi doğrudan gösterir
+
+class hayvan (cins):
+	tur = cins 
+	def metot (self):
+		self.cins="balıklar"
+-------------------------------------------------
+class hayvan ():
+	pass
+class araba ():
+	pass
+
+at= hayvan()
+horoz= hayvan()
+
+taksi= araba()
+kamyon= araba()
+-------------------------------------------
+class araba ():
+	def __init__(self,model,marka,renk):
+		self.model=model
+		self.marka=marka
+		self.renk=renk
+taksi=araba(2020,"fiat","yeşil")
+print(taksi.model) >self yerine taksi yazıldı
+
+taksi.model=2022 > güncelleme yapar
+---------------------------------------
+class araba ():
+	def __init__(self,model,marka,renk):
+		self.model=model
+		self.marka=marka
+		self.renk=renk
+	def aracbilgi(self):
+		print ("markası :", self.marka)
+		print ("modeli:", self.model)
+		print ("renk:", self.renk )
+taksi=araba(2020,"fiat","yeşil")
+taksi.aracbilgisi() > metot çağırılır
+-------------------------------------------
+def __init__ > başlangıç değeri atamak için kullandığım metot. return kullanılmaz
+-----------------------------------
+dir(taksi) > bütün özellikleri yazdırır
+class oluşturunca yeni bir veri tipi oluşturmuş olurum 
+-------------------------------------------
+kalıtım/inheritance
+üst sınıfın altında alt sınıf oluştururuz ve bu alt sınıf, üst sınıfın özelliklerini taşır
+--------------------------------------------
+import -modül-
+eğer import ettiğim modül içinden tüm fonk kullanmak istiyorsam 
+from -modül- import *
+
+sadece 1 fonk kullanmak istiyorsam 
+from -modül- import -fonk-
+
+import dikdortgenalani as da > dikdortgenalani yerine da yazacak fonklar cagırılabilir. 
+da.alan(5,3)
+-------------------------------------------------
+__name__ == "__main__"
+------------------------------------------------
+abs(x) > mutlak değer 
+round(x) > sayı yuvarlar
+max (x,y) > en büyüğü
+min(x,y) > en küçüğü
+pow(x,y) > x üzeri y
+bin(x) > ikiliğe çevirir
+hex(x) > onaltılığa çevirir
+chr(x) > ascii/decimal çevirir
+sum([a,s,f,r,g,c]) > içindeki küme, tuple veya listedeki tüm sayıları toplar
+
+import math 
+math.sqrt(x) > karekök alır
+math.pi > pi sayısını verir
+math.gdc > en büyük ortak böleni bulur
+
+import random 
+random.random() > 0-1 arası rastgele float üretir
+random.randint(x,y) > x,y arası rastgele integer değer üretir 
+random.randrange(1,13,2) > 1-13 arası ikişer atlayarak bunlardan birini rastgele seçer
+random.uniform(x,y) > x,y arası rastgele float değer üretir
+random.choice(["a","c",5,3,6]) > listeden rastgele seçer 
+random.choice(Liste) > tanımlı listeden rastgele secer
+random.shuffle(liste) > listeyi rastgele sıralar, listeye atar
+random.sample(liste,2) > listeden rastgele 2 eleman seçer 
+--------------------------------------------------
+import turtle
+turtle.position() > nerdeyim onu gösterir
+turtle.pos() > nerdeyim onu gösterir
+turtle.goto(x,y) > bir yere götürür
+turtle.setposition(x,y) > bir yere götürür
+turtle.setpos(x,y) >  bir yere götürür
+turtle.reset() > sıfıra sıfıra çeker
+turtle.home() > sıfıra sıfıra çeker
+turtle.setx(x) > sadece x günceller
+turtle.sety(y) > sadece y günceller
+turtle.forward(x) > ileri götürür
+turtle.fd (x) > ileri götürür
+turtle.backward(x) > geri götürür
+turtle.bk(x) > geri götürür
+turtle.right(x) > x derede sağa döndürür
+turtle.rt(x) > x derede sağa döndürür
+turtle.left(x) > x derede sağa döndürür
+turtle.lt(x) > x derede sağa döndürür
+turtle.getshapes > başka hangi şekiller olduğunu gösterir
+turtle.shape(turtle) > turtle şeklini alır
+turtle.hideturtle() > simgeyi gizler
+turtle.showturtle > gizlenmiş simgeyi gösterir
+pensize > kalem kalınlığı ayarlar 
+pencolor("red") > kalem rengi
+penup() > çizim yapmadan istediğim yere gider
+pendown() > çizim yapmak için kalemi yere koyar
+color(x,y) > x çizgi rengi, iç dolgusu y rengi. renkleri ingilizce girmeliyiz
+begin_fill > doldurmayı başlatmak için
+end_fill > doldurmayı bitirmek için
+fillcolor("red") > renk belirler
+circle(r,) > r yarıçaplı bir daire çizer
+
+colormode(255) > 255 arasından
+color(r,g,b) > rgb kodlarını kendim gireceğim demek
+----------------------------------------------------
+iletişim kutusu ile giriş alma
+n=int(numinput("poligon","kenar sayısı"))
+renk=textinput("renk","iç rengi")
+-------------------------------------------------
+paintte resmin piksel çözünürlüğünü öğren, gif olarak python'ın kurulu olduğu dosyaya kaydet 
+setup(x,y) > çerçeve pikseli belirler
+setup(width=x, height=y)
+bgpic("resminadi.gif") > fotoğrafı seçtim 
+--------------------------------------------------
+onclick(f) > fareye tıklanınca f fonk çağırır
+onscreenclick(f) > fareye tıklanınca f fonk çağırır
+onrelease(f) > fare bırakılınca f fonk çağırır
+ondrag(f) > fare sürüklenince f fonk cağırır
+listen() > hangi tuşa basıldığını dinler
+onkey(f,tuş) > tuş bırakılınca f fonk çağırır
+onkeyrelease(f,tuş) > tuş bırakılınca f fonk çağırır
+onkeypress(f,tuş) > tuşa baıslınca f fonk çağırır 
+ontimer(f,t) > t ms sonra f fonk çağıran sayaç
+mainloop() > olay yakalama döngüsü başlatır, en son satır
+done() > olay yakalama döngüsü başlatır, en son satır
+exitonclick() > fare tıklandığında bye() fonk çağırır
+bye() > grafik pemcere kapatır
+textinput(başlık,mesaj) > iletişim kutusuna str girişi alır
+numinput(başlık,mesaj) > iletişim kutusundan float veri alır
+write() > ekrana yazı yazar
+delay() > ms olarak çizim hareketi geciktirir
+tracer(n, delay) > animasyon ayarları değiştirir. n kez ekranı yeniler, delay ms gecikmesi
+update() > çizim ekranı günceller
+distance() > mesafe belirleme
+screen() > ekran
+
+import time
+time.sleep(x) > x saniye durması için 
+
+ses dosyalarım py dosyasında olmalı
+import pylaysound (yoksa kur)
+playsound.playsound("calınacakses.mp3") > sesi oynatır
